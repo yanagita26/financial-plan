@@ -1,5 +1,7 @@
-
-
+<app-page-header
+[title]="'今後のライフイベントとかかる費用'"
+[desc]="'今から20年先までの自分と家族の暮らしをイメージしながら、先々のライフイベントとかかる費用を書き出してみましょう'"
+></app-page-header>
 <app-family-alert *ngIf="isEmptyFamily()"></app-family-alert>
 
 <app-life-event-input [family]="family"></app-life-event-input>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './../shared/shared.module';
 
 import { IncomeConfirmationRoutingModule } from './income-confirmation-routing.module';
 import { IncomeConfirmationComponent } from './income-confirmation.component';
@@ -11,7 +12,8 @@ import { ExpenseComponent } from './expense/expense.component';
   imports: [
     CommonModule,
     IncomeConfirmationRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   declarations: [
     IncomeConfirmationComponent,
