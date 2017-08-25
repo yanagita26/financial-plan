@@ -1,0 +1,23 @@
+div {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 5px;
+  }
+  
+  input {
+    width: 100%;
+    text-align: right;
+    background: transparent;
+    border: none;
+    padding: 5px 0;
+    font-size: 1.3rem;
+  }
+  
+  span::after {
+    content: '万円';
+    font-size: 0.7rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
+  }

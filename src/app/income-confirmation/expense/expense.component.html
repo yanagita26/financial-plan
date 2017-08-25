@@ -1,0 +1,29 @@
+<h3>年間の支出</h3>
+<div class="container">
+  <header>
+    <div class="item">支出項目</div>
+    <div class="content">内容</div>
+    <div class="monthly">毎月 ①</div>
+    <div class="suddenly">年に数回 ②</div>
+    <div class="yearly">年間 ①×12+②</div>
+  </header>
+  <div class="row" *ngFor="let cost of costs">
+    <div class="item item-cell">{{cost.item}}</div>
+    <div class="content content-cell">{{cost.desc}}</div>
+    <div class="monthly input-cell">
+      <input type="number" [(ngModel)]="cost.monthly" min="0"><span></span>
+    </div>
+    <div class="suddenly input-cell">
+      <input type="number" [(ngModel)]="cost.suddenly" min="0"><span></span>
+    </div>
+    <div class="yearly view-cell">
+      <span>{{cost.monthly*12+cost.suddenly}}</span>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="title"><div class="radius-orange">B</div>年間支出合計</div>
+  <div class="total">
+    <span>{{calcTotalExpenses()}}</span>
+  </div>
+</footer>

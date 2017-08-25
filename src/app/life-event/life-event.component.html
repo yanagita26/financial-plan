@@ -1,0 +1,6 @@
+
+
+<app-family-alert *ngIf="isEmptyFamily()"></app-family-alert>
+
+<app-life-event-input [family]="family"></app-life-event-input>
+<app-life-event-list [family]="family" [events]="lifeEvents"></app-life-event-list>

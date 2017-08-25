@@ -1,0 +1,7 @@
+<div *ngIf="!edit" (click)="onClick()">
+    <span class="year">{{event.year}}</span>
+    <span *ngFor="let person of family" class="age">{{ageOfYear(person.birthday, event.year)}}</span>
+    <span class="event">{{event.eventName}}</span>
+    <span class="money">{{event.money}}万円</span>
+  </div>
+  <app-life-event-update [event]="event" [family]="family" *ngIf="edit" (submitLifeEvent)="changeEvent()"></app-life-event-update>
